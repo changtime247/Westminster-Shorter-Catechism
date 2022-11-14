@@ -1,0 +1,198 @@
+:root,
+#root {
+    background-color: #eee;
+}
+
+h3,
+p,
+.extra_text {
+    color: #fff
+}
+
+body * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
+
+.form {
+    margin: 0 0.5rem;
+}
+
+.prev {
+    margin-right: 0.15rem;
+}
+
+.next {
+    margin-left: 0.15rem;
+}
+
+.main-card {
+    padding: 1rem;
+    margin-top: 1rem;
+    min-height: 83vh;
+}
+
+.faIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.p-faIcon {
+    margin: 0.5rem auto;
+}
+
+.btn-show-answer {
+    width: 8rem;
+}
+
+.show-answer {
+    margin-top: 1rem;
+}
+
+.show-answer>h3 {
+    font-size: 1.3rem;
+}
+
+.footnotes>h3 {
+    font-size: 1rem;
+}
+
+.show-proof-text {
+    font-size: 1rem;
+}
+
+.extra_text {
+    font-size: 1rem;
+}
+
+.extra_text p,
+.footnotes,
+.footnote-ref {
+    font-size: 0.75rem;
+}
+
+.footnote a {
+    font-size: 0.6rem;
+}
+
+.audio,
+.mp3link {
+    font-size: 0.85rem;
+}
+
+.verse-num {
+    font-size: 0.5rem;
+    vertical-align: super;
+}
+
+span.navbar-brand {
+    color: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.copyright {
+    color: #29abe0;
+}
+
+/* * * Proof text * * */
+.div-proof-text {
+    padding-top: 1.25rem;
+}
+
+.show-proof-text h2 {
+    font-size: 1.2rem;
+}
+
+/* * * Modal * * */
+
+#footer-col-translation {
+    text-align: right;
+    margin-right: 0.15rem;
+}
+
+#about-us {
+    background: none;
+    color: #29abe0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    display: inline-block;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    z-index: -1;
+}
+
+/* open and close modal */
+.show-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal-container {
+    background-color: #eee;
+    border-radius: 1%;
+    width: 90vw;
+    min-height: fit-content;
+    max-width: 620px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 400px) {
+    .modal-container {
+        height: 45vh;
+    }
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: -0.6rem;
+    right: 0.5rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: rgb(225, 0, 0);
+    /* cursor: pointer; */
+}
+
+.close-modal-btn:hover {
+    color: rgb(180, 0, 0);
+}
+
+.modal-container span {
+    display: block;
+    padding-bottom: 0.25rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.modal-container h6 {
+    font-size: 1rem;
+    text-align: left;
+    padding: 1.75rem 0.5rem 1rem 1rem;
+    line-height: 1.35rem;
+}
+
+.modal-container i {
+    font-size: 1rem;
+}
