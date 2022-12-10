@@ -45,6 +45,7 @@ function WSCCard({
       setProofTextState([...data.passages])
       setIsLoading(false)
     } catch (error) {
+      console.log('Something went wrong')
       setIsLoading(false)
     }
   }
@@ -82,7 +83,10 @@ function WSCCard({
         <Button
           size='sm'
           className='btn-show-answer'
-          onClick={() => setShowAnswer(!showAnswer)}
+          onClick={() => {
+            setShowAnswer(!showAnswer)
+            showProof && setShowProof(!showProof)
+          }}
         >
           {showAnswer ? 'Hide answer' : 'Show answer'}
         </Button>
@@ -101,11 +105,15 @@ function WSCCard({
           </div>
         )}
         <div className='div-proof-text'>
-          {showProof && <h3>Proof-text</h3>}
+          {showProof && <h3 className='underline'>Proof-text</h3>}
           {showProof &&
             proofTextState.map((p, idx) => (
               <div key={idx} className='show-proof-text'>
+                <h2 className=''>{`(${idx + 1})`}&nbsp;</h2>
                 {parse(stripESV(p))}
+                <br />
+                {/* {parse((p))} */}
+                {/* {p} */}
               </div>
             ))}
         </div>

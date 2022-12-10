@@ -12,7 +12,7 @@ App to learn the Westminster Shorter Catechism integrating the ESV-API (English 
 
 ### Packages/Dependencies used
 
-- frontend: react, bootstrap, react-bootstrap, bootswatch, html-react-parser
+- frontend: react, bootstrap, react-bootstrap, html-react-parser
 - middleware: dotenv, express, http-proxy-middleware, node-fetch, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
 
 ### Use

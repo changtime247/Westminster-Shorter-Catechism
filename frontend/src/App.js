@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './app.css'
-import './bootstrap.min.css'
 import Header from './components/Header'
 import WSCCard from './components/WSCCard'
 import { data } from './data/allQues'
@@ -17,6 +16,7 @@ export default function App() {
   const [topic, setTopic] = useState({ topic: 'God the Creator', id: 1 })
   const [modalShow, setModalShow] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isESVCopyrightModalOpen, setIsESVCopyrightModalOpen] = useState(false)
 
   return (
     <>
@@ -47,6 +47,8 @@ export default function App() {
         setIsModalOpen={setIsModalOpen}
         modalShow={modalShow}
         setModalShow={setModalShow}
+        isESVCopyrightModalOpen={isESVCopyrightModalOpen}
+        setIsESVCopyrightModalOpen={setIsESVCopyrightModalOpen}
       />
     </>
   )

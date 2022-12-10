@@ -2,7 +2,6 @@ import {} from 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import fetch from 'node-fetch'
-const PORT = 5000
 
 const app = express()
 app.use(express.json())
@@ -33,6 +32,6 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
   res.json(jsonResponse)
 })
 
-app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`)
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Example app listening at ${process.env.PORT || 3000}`)
 })

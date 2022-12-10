@@ -32,7 +32,7 @@ function Header({
         bg='dark'
         style={{ padding: 0 }}
       >
-        <Navbar.Brand className='brandName'>
+        <Navbar.Brand className='title'>
           Westminster Shorter Catechism
         </Navbar.Brand>
       </Navbar>
