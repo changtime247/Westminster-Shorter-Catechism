@@ -7,16 +7,12 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
+import { useAppContext } from '../context/app_context'
 
-function Header({
-  list,
-  id,
-  setContent,
-  setIndex,
-  index,
-  setShowAnswer,
-  setShowProof,
-}) {
+function Header() {
+  const { list, id, setContent, setIndex, index, setShowAnswer, setShowProof } =
+    useAppContext()
+
   function handleSelect(e) {
     e.preventDefault()
     setIndex(+e.target.value - 1)

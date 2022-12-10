@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { useModalContext } from '../context/modal_context'
 
-const Modal = ({ isModalOpen, closeModal }) => {
+const Modal = () => {
+  const { isModalOpen, closeModal } = useModalContext()
+
   return (
     <div
       className={`${

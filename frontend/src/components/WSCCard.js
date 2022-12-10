@@ -14,19 +14,22 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import parse from 'html-react-parser'
 import { stripESV } from '../util/utils'
+import { useAppContext } from '../context/app_context'
 
-function WSCCard({
-  index,
-  content,
-  isLoading,
-  setIsLoading,
-  proofTextState,
-  setProofTextState,
-  showAnswer,
-  setShowAnswer,
-  showProof,
-  setShowProof,
-}) {
+const WSCCard = () => {
+  const {
+    index,
+    content,
+    isLoading,
+    setIsLoading,
+    proofTextState,
+    setProofTextState,
+    showAnswer,
+    setShowAnswer,
+    showProof,
+    setShowProof,
+  } = useAppContext()
+
   const restEndpoint = 'http://localhost:5000/getData'
 
   async function fetchProofText({ proofText }) {

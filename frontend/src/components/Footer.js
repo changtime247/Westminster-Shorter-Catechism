@@ -1,25 +1,10 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import Modal from './Modal'
 import ESVCopyrightModal from './ESVCopyrightModal'
+import { useModalContext } from '../context/modal_context'
 
-export default function Footer({
-  isModalOpen,
-  setIsModalOpen,
-  isESVCopyrightModalOpen,
-  setIsESVCopyrightModalOpen,
-}) {
-  const openModal = () => {
-    setIsModalOpen(true)
-  }
-  const closeModal = () => {
-    setIsModalOpen(false)
-  }
-  const openESVCopyrightModal = () => {
-    setIsESVCopyrightModalOpen(true)
-  }
-  const closeESVCopyrightModal = () => {
-    setIsESVCopyrightModalOpen(false)
-  }
+export default function Footer() {
+  const { openModal, openESVCopyrightModal } = useModalContext()
 
   return (
     <footer>
@@ -31,7 +16,11 @@ export default function Footer({
             </button>
           </Col>
           <Col id='footer-col-translation'>
-            <button variant='primary' onClick={openESVCopyrightModal} id='esv-legal-stuff'>
+            <button
+              variant='primary'
+              onClick={openESVCopyrightModal}
+              id='esv-legal-stuff'
+            >
               Translation: &#169;
             </button>{' '}
             <a href='http://www.esv.org' className='copyright'>
@@ -40,16 +29,8 @@ export default function Footer({
           </Col>
         </Row>
       </Container>
-      <Modal
-        isModalOpen={isModalOpen}
-        closeModal={closeModal}
-        setIsModalOpen={setIsModalOpen}
-      />
-      <ESVCopyrightModal
-        isESVCopyrightModalOpen={isESVCopyrightModalOpen}
-        closeESVCopyrightModal={closeESVCopyrightModal}
-        setIsESVCopyrightModalOpen={setIsESVCopyrightModalOpen}
-      />
+      <Modal />
+      <ESVCopyrightModal />
     </footer>
   )
 }
