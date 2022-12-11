@@ -30,7 +30,8 @@ const WSCCard = () => {
     setShowProof,
   } = useAppContext()
 
-  const restEndpoint = 'http://localhost:5000/getData'
+  const restEndpoint =
+    'https://westminster-shorter-catechism-production.up.railway.app/getData'
 
   async function fetchProofText({ proofText }) {
     setIsLoading(true)
