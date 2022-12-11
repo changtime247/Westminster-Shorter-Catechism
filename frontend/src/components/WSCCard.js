@@ -30,20 +30,19 @@ const WSCCard = () => {
     setShowProof,
   } = useAppContext()
 
-  const restEndpoint =
-    'https://westminster-shorter-catechism-production.up.railway.app/getData'
+  const restEndpoint = 'http://localhost:5000/getData'
 
   async function fetchProofText({ proofText }) {
     setIsLoading(true)
-    const prooof = proofText.join`;`
+    const proofs = proofText.join`;`
 
     try {
-      const response = await fetch(restEndpoint + `/?q=${prooof}`, {
+      const response = await fetch(restEndpoint + `/?q=${proofs}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
-        params: JSON.stringify(prooof),
+        params: JSON.stringify(proofs),
       })
       const data = await response.json()
       setProofTextState([...data.passages])

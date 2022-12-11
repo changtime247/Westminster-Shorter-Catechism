@@ -1,15 +1,28 @@
-const express = require('express')
-const cors = require('cors')
-const fetch = require('node-fetch')
-const dotenv = require('dotenv')
+import express from 'express'
+import cors from 'cors'
+import fetch from 'node-fetch'
+import proxy from 'http-proxy-middleware'
+import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express()
 app.use(express.json())
 app.use(cors())
 
+// app.use(function (req, res, next) {
+//   res.header(
+//     'Access-Control-Allow-Origin',
+//     'https://westminster-shorter-catechism.pages.dev/'
+//   )
+//   res.header(
+//     'Access-Control-Allow-Headers',
+//     'Origin, X-Requested-With, Content-Type, Accept'
+//   )
+//   next()
+// })
+
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:3000/',
 }
 
 const requestEndpoint = 'https://api.esv.org/v3/passage/html/'
@@ -22,8 +35,6 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
       'Content-Type': 'application/json',
     },
   }
-  // console.log('req.query')
-  // console.log(req.query.q)
 
   const response = await fetch(
     `${requestEndpoint}?q=${req.query.q}`,
