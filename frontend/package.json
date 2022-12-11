@@ -9,9 +9,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.2.1",
     "bootstrap": "^5.2.2",
-    "bootswatch": "^5.2.2",
     "html-react-parser": "^3.0.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
@@ -20,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "homepage": ".",
-  "proxy": "http://localhost:3000/",
+  "proxy": "https://westminster-shorter-catechism-production.up.railway.app/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
